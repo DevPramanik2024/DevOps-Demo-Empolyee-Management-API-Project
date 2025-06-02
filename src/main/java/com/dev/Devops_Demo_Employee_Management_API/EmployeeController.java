@@ -5,7 +5,6 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -90,16 +89,5 @@ public class EmployeeController {
 		erepo.save(emp);
 		return emp;
 	}
-	@DeleteMapping("/remove/id")
-	public String remove(@PathVariable int id) {
-		
-		logger.info("this is Delete/Remove/Id info");
-		logger.warn("logger Delete/Remove/Id warn");
-		logger.error("logger Delete/Remove/Id error");
-		logger.debug("logger Delete/Remove/Id debug");
-		logger.trace("logger Delete/Remove/Id trace");
-		
-		erepo.deleteById(id);
-		return"Data deleted successfully";
-	}
+	
 }
